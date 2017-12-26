@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/src/index.js",
+            "stopOnEntry": false,
+            "args": [],
+            "cwd": "${workspaceRoot}",
+            "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+            "runtimeArgs": [
+                ".",
+                "--enable-logging"
+
+            ],
+            "env": {},
+            "console":"integratedTerminal",
+            "sourceMaps": false
+        },
+        {
+            "name": "Attach",
+            "type": "node",
+            "request": "attach",
+            "processId": "${command:PickProcess}",
+            "port": 5858,
+            "sourceMaps": false
+        }
+    ]
+}
